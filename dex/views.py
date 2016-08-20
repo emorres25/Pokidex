@@ -24,9 +24,9 @@ def search(request, search_string):
     result_arr = []
     #list_dir = os.listdir('/home/emorres25/PycharmProjects/Pokidex/static/images')
     #print list_dir
-
+    search_string = str(search_string)
     for key,value in poke_dict.iteritems():
-        if search_string in key:
+        if search_string.lower() in key.lower():
             result_arr.append(value)
 
 
@@ -35,7 +35,9 @@ def search(request, search_string):
         if str(search_string) in file_name:
             result_arr.append(file_name)
     '''
-    print result_arr
+    
+    print str(search_string)
+    #print result_arr
     context_dict = {}
     #context_dict['list_dir'] = list_dir
     context_dict['result_arr'] = result_arr

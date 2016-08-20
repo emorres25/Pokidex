@@ -2,8 +2,8 @@
 
 {% block form %}
     <center>
-        <form>
-        <input type="text" name="firstname"><br>
+        <form onsubmit="return false;">
+        <input id="search_string" type="text" name="firstname"><br>
     </form>
         <br>
         <button onclick='search()' type="submit" >Submit</button>
@@ -35,7 +35,8 @@
 {% block scripts %}
     <script type="text/javascript">
         function search(){
-            var search_string = $("#search_string").val();
+            search_string = $("#search_string").val();
+            //alert(  $("#search_string").val() );
             window.location.href = '/search/' + search_string;
             //alert('hello');
         };

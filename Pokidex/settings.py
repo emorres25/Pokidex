@@ -62,7 +62,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': '/home/emorres25/PycharmProjects/Pokidex/db.sqlite3'
+        'NAME': '/Users/shaurya/Documents/django/Pokidex/db.sqlite3'
     }
 }
 
@@ -85,13 +85,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_PATH = '/home/emorres25/PycharmProjects/Pokidex/templates/dex'
+TEMPLATE_PATH = '/Users/shaurya/Documents/django/Pokidex/templates/dex'
 
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 
-STATIC_PATH = '/home/emorres25/PycharmProjects/Pokidex/static'
+STATIC_PATH = '/Users/shaurya/Documents/django/Pokidex/static'
 
 STATICFILES_DIRS = (
     STATIC_PATH,
