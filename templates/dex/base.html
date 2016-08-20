@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dexie</title>
+    <style>
+        body {
+            background-color: grey;
+        };
+        .mons {
+            align: center;
+        };
+    </style>
+</head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <center><h3>Welcome to the Pokidex main page!</h3></center>
+    <br>
+    <div class='mons'>
+
+        {% block form %}{% endblock form %}
+
+        {% block content %}{% endblock content %}
+
+        {% block image %}{% endblock image %}
+
+        {% block scripts %}{% endblock scripts %}
+    </div>
+    <br>
+
+</body>
+</html>

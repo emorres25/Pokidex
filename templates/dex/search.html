@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block form %}
+    <center>
+        <form>
+        <input type="text" name="firstname"><br>
+    </form>
+        <br>
+        <button onclick='search()' type="submit" >Submit</button>
+    </center>
+
+{% endblock form %}
+
+
+{% block content %}
+    <div>
+        <p>The results for the query {{search_string}} are:</p>
+        <code>
+            {{result_arr}}
+        </code>
+    </div>
+{% endblock content %}
+
+{% block image %}
+    <div>
+        {% for link in result_arr %}:
+
+            <img src="{{link}}">
+
+        {% endfor %}
+    </div>
+{% endblock image %}
+
+
+{% block scripts %}
+    <script type="text/javascript">
+        function search(){
+            var search_string = $("#search_string").val();
+            window.location.href = '/search/' + search_string;
+            //alert('hello');
+        };
+    </script>
+
+
+
+
+{% endblock scripts %}
